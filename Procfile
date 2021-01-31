@@ -1,1 +1,3 @@
-web: gunicorn --bind 0.0.0.0:$PORT hello:app
+web:gunicorn djdeneme.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
