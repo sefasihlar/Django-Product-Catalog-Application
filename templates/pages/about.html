@@ -1,0 +1,172 @@
+{% extends 'toplama.html'%}
+{% load static %}
+{% block content%}
+<nav class="navbar navbar-dark  navbar-expand-sm bg-dark fixed-top">
+
+
+  <div class="container">
+
+
+    <a href="/" class="navbar-brand">
+
+      Kadın Reonu
+
+    </a>
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/" class="nav-link ">
+          Ana Sayfa
+        </a>
+
+      </li>
+      <li class="nav-item">
+        <a href="{% url 'about'%}" class="nav-link active">
+          Kadın
+        </a>
+
+      </li>
+      <li class="nav-item">
+        <a href="{% url 'kadinlar'%}" class="nav-link ">
+          Erkek
+        </a>
+      </li>
+
+  </div>
+
+
+</nav>
+<br><br><br>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{%static 'kadın/s1.jpg'%}" class="rounded mx-auto d-block" style="width: 80; height: 30rem" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{%static 'kadın/s2.jpg'%}" class="rounded mx-auto d-block" style="width: 70; height: 50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{%static 'kadın/s3.jpg'%}" class="rounded mx-auto d-block" style="width: 70; height: 50" alt="...">
+    </div>
+  </div>
+</div>
+</div>
+
+<br><br><br><br><br><br>
+{%if Urunler%}
+{%for Kadınlar in Urunler %}
+
+<div class="card-deck px-5 p-5 ">
+  <div class="card mx-5">
+
+    <figure class="snip1581"><img class="card-img-top" src="{% static Kadınlar.get_image_path%}" alt="Card image cap">
+
+
+
+
+    </figure>
+
+    <div class="card-body">
+      <h5 class="card-title">
+        <h3>{{Kadınlar.Baslik}} </h3>
+        <p class="card-text"> {{Kadınlar.text}} </p>
+        <p class="card-text"><small class="text-muted">{{Kadınlar.ozellik}} </small></p>
+        <button type="button" class="btn btn-dark text-center">{{Kadınlar.fiyat}}</button>
+    </div>
+  </div>
+  <div class="card mx-5">
+    <div class="inner">
+      <img class="card-img-top" src="{% static Kadınlar.get_image2_path%}" alt="Card image cap">
+    </div>
+
+    <div class="card-body">
+      <h3 class="card-title">{{Kadınlar.Baslik2}} </h5>
+        <p class="card-text">{{Kadınlar.text}}</p>
+        <p class="card-text"><small class="text-muted">{{Kadınlar.ozellik2}}</small></p>
+        <button type="button" class="btn btn-info">{{Kadınlar.fiyat2}}</button>
+    </div>
+  </div>
+  <div class="card mx-5">
+    <figure class="snip1581"><img class="card-img-top" src="{% static Kadınlar.get_image3_path%}" alt="Card image cap">
+
+    </figure>
+    <div class="card-body">
+      <h5 class="card-title">
+        <h3>{{Kadınlar.Baslik2}} </h3>
+        <p class="card-text">{{Kadınlar.text3}}</p>
+        <p class="card-text"><small class="text-muted">{{Kadınlar.ozellik3}}</small></p>
+        <button type="button" class="btn btn-primary">{{Kadınlar.fiyat3}}</button>
+    </div>
+  </div>
+  <div class="card mx-5">
+    <div class="inner">
+      <img class="card-img-top" src="{% static Kadınlar.get_image4_path%}" alt="Card image cap">
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title">
+        <h3>{{Kadınlar.Baslik4}} </h3>
+        <p class="card-text">{{Kadınlar.text4}}</p>
+        <p class="card-text"><small class="text-muted">{{Kadınlar.ozellik4}}</small></p>
+        <button type="button" class="btn btn-warning">{{Kadınlar.fiyat4}}</button>
+    </div>
+  </div>
+  <div class="card mx-5">
+    <figure class="snip1581"><img class="card-img-top" src="{% static Kadınlar.get_image5_path%}" alt="Card image cap"">
+              
+            </figure>
+            <div class=" card-body">
+      <h5 class="card-title">
+        <h3>{{Kadınlar.Baslik5}} </h3>
+        <p class="card-text">{{Kadınlar.text5}}</p>
+        <p class="card-text"><small class="text-muted">{{Kadınlar.ozellik5}}</small></p>
+        <button type="button" class="btn btn-primary">{{Kadınlar.fiyat5}}</button>
+  </div>
+</div>
+<div class="card mx-5">
+  <div class="inner">
+    <img class="card-img-top" src="{% static Kadınlar.get_image6_path%}" alt="Card image cap">
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">
+      <h3>{{Kadınlar.Baslik6}} </h3>
+      <p class="card-text">{{Kadınlar.text6}}</p>
+      <p class="card-text"><small class="text-muted">{{Kadınlar.ozellik6}}</small></p>
+      <button type="button" class="btn btn-primary">{{Kadınlar.fiyat6}}</button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+{%endfor%}
+{%else%}
+<div class="alert alert-warning">
+  <p>Hata Aldın Kardes</p>
+</div>
+{%endif%}
+
+
+
+
+
+
+
+
+
+<br><br>
+
+<footer class="py-1 bg-dark text-white text-center">Ömer Coşkun <br>
+  Tel:454545454545 <br>
+  Email:sihlar@gmail.com
+
+</footer>
+
+
+
+{% endblock content %}

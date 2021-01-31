@@ -1,0 +1,1 @@
+web: gunicorn djdeneme.wsgi --log-file =-
