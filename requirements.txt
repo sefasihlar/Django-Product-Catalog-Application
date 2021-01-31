@@ -9,6 +9,8 @@ confing==0.1.4
 dj-database-url==0.5.0
 Django==3.1.4
 django-heroku==0.3.1
+docopt==0.6.2
+gitignore==0.0.8
 gunicorn==20.0.4
 idna==2.10
 init==0.1.0
@@ -26,6 +28,7 @@ python-decouple==3.4
 pytz==2020.5
 PyYAML==5.3.1
 qtwidgets==0.17
+Rails==0.0.5
 requests==2.25.1
 six==1.15.0
 sqlparse==0.4.1
@@ -34,5 +37,6 @@ terminal==0.4.0
 toml==0.10.1
 translationstring==1.4
 urllib3==1.26.3
+WebOb==1.8.6
 whitenoise==5.2.0
 wrapt==1.12.1
