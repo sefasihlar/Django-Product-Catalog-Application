@@ -32,11 +32,13 @@
           Erkek
         </a>
       </li>
+     
       <li class="nav-item">
         <a href="#" class="nav-link ">
 
         </a>
       </li>
+    
       <li class="nav-item">
       <li class="dropdown float-right" style="margin-right: 5rem;">
         <a class="dropdown-toggle expand-sm  text-white  " data-toggle="dropdown" href="#" style="float: right;"
@@ -97,10 +99,25 @@
         <h3>{{Anasayfa.Baslik}} </h3>
         <p class="card-text"> {{Anasayfa.text}} </p>
         <p class="card-text"><small class="text-muted">{{Anasayfa.ozellik}} </small></p>
-        <button type="button" class="btn btn-dark text-center">{{Anasayfa.fiyat}}</button>
+        <button type="button" class="btn btn-dark text-center" id="1">{{Anasayfa.fiyat}}
+          <form action="{% url 'index'%}" method="POST">
+            {%csrf_token%}
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+              <label class="custom-control-label" for="customCheckDisabled">Check this custom checkbox</label>
+            </div>
+            
+            <div class="custom-control custom-radio">
+              <input type="radio" id="radio3" name="radioDisabled" id="customRadioDisabled" class="custom-control-input" disabled>
+              <label class="custom-control-label" for="customRadioDisabled">Toggle this custom radio</label>
+            </div>
+
+
+
+        </button>
     </div>
   </div>
-  <div class="card mx-5 ">
+  <div class="card mx-5 " id="1">
     <div class="inner">
       <img class="card-img-top" src="{% static Anasayfa.get_image2_path%}" alt="Card image cap">
 

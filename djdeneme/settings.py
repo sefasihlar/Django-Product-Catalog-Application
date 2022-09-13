@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'pages',
     'Urun',
     'user',
+    'siparis',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

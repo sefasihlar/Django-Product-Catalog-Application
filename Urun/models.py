@@ -1,5 +1,4 @@
 from django.db import models
-
 class Anasayfa(models.Model):
     Baslik = models.CharField(max_length=50)
     image =  models.CharField(max_length=50)
@@ -167,4 +166,3 @@ class Erkekler(models.Model):
 
 
    
-    

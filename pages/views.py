@@ -12,8 +12,12 @@ def index(request):
     bilgiler = {
         'Urunler':Urunler
     }
+    if request.method == 'POST':
+        print('post alındı')
+        fiyat= request.POST['radioDisabled']
     
-   
+        print(fiyat)
+
     
     return render(request,'pages/index.html',bilgiler)
 
@@ -30,7 +34,8 @@ def kadinlar(request):
         'Urunler':Urunler
     }
     
-    
     return render(request,'pages/kadinlar.html',bilgiler)
 
 
+
+   
